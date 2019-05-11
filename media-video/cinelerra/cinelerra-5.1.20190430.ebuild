@@ -7,6 +7,7 @@ inherit autotools eutils multilib flag-o-matic
 DESCRIPTION="The most advanced non-linear video editor and compositor"
 HOMEPAGE="http://www.cinelerra-gg.org/"
 SRC_URI="https://cinelerra-gg.org/download/pkgs/src/cin_${PV}-src.tgz"
+RESTRICT="primaryuri"
 
 LICENSE="GPL-2"
 SLOT="0"

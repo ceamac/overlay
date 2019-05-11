@@ -6,7 +6,7 @@ EAPI=7
 DESCRIPTION="console fourcc changer"
 HOMEPAGE="https://github.com/mypapit/cfourcc"
 SRC_URI="https://github.com/mypapit/${PN}/archive/${PV}.tar.gz"
-RESTRICT="mirror"
+RESTRICT="primaryuri"
 
 LICENSE="GPL-2"
 SLOT="0"
