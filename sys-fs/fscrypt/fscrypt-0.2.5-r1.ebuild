@@ -33,6 +33,7 @@ SRC_URI="https://${EGO_PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz
 
 # I don't understand how this is supposed to work
 # It downloads from github at compile time, should not do that
+# works only with FEATURES="-network-sandbox"
 src_compile() {
 	(
 		unset GOFLAGS
