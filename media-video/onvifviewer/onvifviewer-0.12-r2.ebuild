@@ -35,3 +35,13 @@ DEPEND="kde-frameworks/extra-cmake-modules:5
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-v${PV}"
+
+pkg_postinst()
+{
+	xdg_desktop_database_update
+}
+
+pkg_postrm()
+{
+	xdg_desktop_database_update
+}
