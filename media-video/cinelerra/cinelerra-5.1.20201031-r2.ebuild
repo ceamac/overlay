@@ -63,7 +63,7 @@ src_prepare() {
 }
 
 src_configure() {
-	append-cppflags -D__STDC_CONSTANT_MACROS #321945
+	# this doesn't really work
 	append-ldflags -Wl,-z,noexecstack #212959
 
 	local myconf
@@ -94,7 +94,6 @@ src_install() {
 	readarray -d '' HTML_DOCS < <(find doc/ \( -name \*.png -o -name \*.html -o -name \*.texi -o -name \*.swd \) -print0)
 	einstalldocs
 
-	rm -rf "${D}"/usr/include
-
-	find "${D}" -name '*.la' -type f -delete || die
+	rm -rf "${ED}"/usr/include || die
+	find "${ED}" -name '*.la' -type f -delete || die
 }
