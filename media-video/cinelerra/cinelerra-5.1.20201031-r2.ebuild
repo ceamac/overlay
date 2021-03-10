@@ -1,7 +1,7 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 inherit autotools eutils multilib flag-o-matic
 
 DESCRIPTION="The most advanced non-linear video editor and compositor"
@@ -90,7 +90,9 @@ src_configure() {
 
 src_install() {
 	emake -j1 DESTDIR="${D}" install
-	dohtml -a png,html,texi,sdw -r doc/*
+
+	readarray -d '' HTML_DOCS < <(find doc/ \( -name \*.png -o -name \*.html -o -name \*.texi -o -name \*.swd \) -print0)
+	einstalldocs
 
 	rm -rf "${D}"/usr/include
 
