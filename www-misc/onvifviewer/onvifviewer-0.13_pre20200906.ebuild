@@ -8,7 +8,7 @@ DESCRIPTION="Viewer for IP cameras ONVIF"
 HOMEPAGE="https://gitlab.com/caspermeijn/onvifviewer/"
 COMMITHASH=3ebc4d55c1c8507db022f0fb0e1ce870ef03b3e8
 SRC_URI="https://gitlab.com/caspermeijn/onvifviewer/-/archive/${COMMITHASH}/${PN}-${COMMITHASH}.tar.gz"
-RESTRICT="primaryuri"
+RESTRICT="primaryuri network-sandbox test"	# TODO fix this
 
 LICENSE="GPL-3"
 SLOT="0"
