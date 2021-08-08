@@ -86,7 +86,7 @@ src_configure() {
 		$(use_with shuttle) \
 		$(use_with lv2) \
 		$(use_with openexr) \
-		--with-plugin-dir=/usr/$(get_libdir)/${PN} \
+		--with-plugin-dir="${EPREFIX}/usr/$(get_libdir)/${PN}" \
 		${myconf}
 }
 
