@@ -40,7 +40,7 @@ RDEPEND="
 	sci-libs/fftw:3.0=
 	sys-libs/zlib
 	sys-process/numactl
-	x11-libs/libva:=
+	media-libs/libva:=
 	x11-libs/libvdpau
 	x11-libs/libX11
 	x11-libs/libXext
