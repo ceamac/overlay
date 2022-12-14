@@ -12,7 +12,7 @@ inherit autotools
 #       enable OpenCl, needs check whether OpenCL is actually usable
 
 DESCRIPTION="Film-Quality Vector Animation (core engine)"
-HOMEPAGE="http://www.synfig.org/"
+HOMEPAGE="https://www.synfig.org/"
 SRC_URI="https://github.com/synfig/synfig/releases/download/v${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -40,7 +40,7 @@ DEPEND="
 	sci-libs/fftw:3.0=
 	sys-libs/zlib:=
 	fontconfig? ( media-libs/fontconfig )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( media-libs/libjpeg-turbo:= )
 	openexr? ( media-libs/openexr:0= )
 	truetype? (
 		media-libs/freetype
