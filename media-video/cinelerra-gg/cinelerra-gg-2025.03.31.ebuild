@@ -8,7 +8,10 @@ MY_PV=${PV//./}
 
 DESCRIPTION="The most advanced non-linear video editor and compositor"
 HOMEPAGE="https://www.cinelerra-gg.org/"
-SRC_URI="https://cinelerra-gg.org/download/pkgs/src/cin_5.1.${MY_PV}-src.tgz"
+SRC_URI="
+	https://cinelerra-gg.org/download/pkgs/src/cin_5.1.${MY_PV}-src.tgz
+	https://ceamac.com/files/cin_5.1.${MY_PV}-src.tgz
+"
 S="${WORKDIR}/cinelerra-5.1"
 
 LICENSE="GPL-2"
